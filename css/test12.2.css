@@ -1,96 +1,54 @@
-/* 对于这种多板块的案例布局步骤：
-    1.整体内容用，container属性，border框住，这个大盒子单独设置为外扩（内减会减少盒子内容的实际大小）。
-    2.分好大的板块，并且用背景色标注。
-    3.浏览器中块级标签的大小，为实际内容的大小，不包括边框。
-*/
-
 .wrapper {
-    margin: 50px auto;
+    margin: 0 auto;
     width: 867px;
 }
 
-.container {
+.body {
+    margin-top: 50px;
     box-sizing: content-box;
     border: 1px solid black;
-
-    font-size: 30px;
-    line-height: 30px;
-    
-    text-align: center;
+    background: radial-gradient(circle, rgb(13, 152, 11), rgb(241, 241, 209));
 }
 
 .header {
-    border: 1px solid black;
     height: 323px;
-    /* background-color: pink; */
+    border: 1px solid black;
 }
 
 .nav {
-    border: 1px solid black;
     height: 51px;
-    /* background-color: skyblue; */
-}
-
-.main {
-    width: 867px;
-    /* background-color: pink; */
-}
-
-.main_left {
-    float: left;
     border: 1px solid black;
+}
 
+.sidebar {
     width: 251px;
     height: 490px;
-    /* background-color: blanchedalmond; */
-    
-}
-
-.main_right {
-    float: left;
     border: 1px solid black;
-    width: 616px;
-    height: 490px;
-    /* background-color: peru; */
 }
 
-.main_right_top {
-    float: left;
-    width: 616px;
-    height: 300px;
-    /* background-color: pink; */
-}
-
-.main_right_top_left {
-    float: left;
-    border: 1px solid black;
-
+.news {
     width: 313px;
     height: 300px;
-    /* background-color: plum; */
+    border: 1px solid black;
 }
 
-.main_right_top_right {
-    display: inline-block;
-    border: 1px solid black;
+.about {
     width: 303px;
     height: 300px;
-    /* background-color: rgb(96, 34, 96); */
+    border: 1px solid black;
 }
 
-.main_right_bottom {
-    float: left;
-    border: 1px solid black;
+.estate {
     width: 616px;
     height: 190px;
-    /* background-color: skyblue; */
+    border: 1px solid black;
 }
 
 .footer {
+    clear: both;
     height: 110px;
+    border: 1px solid black;
 }
+/* 将 clear: both; 应用于 .footer 元素时，实际上是告诉浏览器在 .footer 元素上方创建一个空白区域，使得 .footer 不受前面浮动元素的影响。这样，.footer 元素将会显示在浮动元素的下方，而不是它们的侧面或之间。 */
 
-span {
-    display: block;
-    text-align-last: left;
-}
+/* 如果子标签继承了父级标签的宽度或者高度，那么浮动后，子标签托标，宽度继承失败，需要自己设置宽度。 */

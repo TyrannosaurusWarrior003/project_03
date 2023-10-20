@@ -1,66 +1,96 @@
+/* 对于这种多板块的案例布局步骤：
+    1.整体内容用，container属性，border框住，这个大盒子单独设置为外扩（内减会减少盒子内容的实际大小）。
+    2.分好大的板块，并且用背景色标注。
+    3.浏览器中块级标签的大小，为实际内容的大小，不包括边框。
+*/
 
 .wrapper {
-    margin: 0 auto;
-    width: 868px;
-    margin-top: 50px;
+    margin: 50px auto;
+    width: 867px;
+}
 
-    font-size: 40px;
-    font-weight: 700;
-   
-    background: radial-gradient(circle, rgb(73, 228, 204), yellow);
-    
-}
-body {
-    background-color: #2c383e;
-}
 .container {
+    box-sizing: content-box;
     border: 1px solid black;
+
+    font-size: 30px;
+    line-height: 30px;
+    
+    text-align: center;
 }
 
 .header {
-    height: 323px;
     border: 1px solid black;
+    height: 323px;
+    /* background-color: pink; */
 }
 
 .nav {
-    height: 51px;
     border: 1px solid black;
+    height: 51px;
+    /* background-color: skyblue; */
+}
+
+.main {
+    width: 867px;
+    /* background-color: pink; */
 }
 
 .main_left {
+    float: left;
+    border: 1px solid black;
+
     width: 251px;
     height: 490px;
-    border: 1px solid black;
+    /* background-color: blanchedalmond; */
+    
 }
 
 .main_right {
-    width: 615px;
-    height: 490px;
+    float: left;
     border: 1px solid black;
+    width: 616px;
+    height: 490px;
+    /* background-color: peru; */
 }
 
-.top_left {
+.main_right_top {
+    float: left;
+    width: 616px;
+    height: 300px;
+    /* background-color: pink; */
+}
+
+.main_right_top_left {
+    float: left;
+    border: 1px solid black;
+
     width: 313px;
     height: 300px;
-    border: 1px solid black;
+    /* background-color: plum; */
 }
 
-.top_right {
-    width: 300px;
+.main_right_top_right {
+    display: inline-block;
+    border: 1px solid black;
+    width: 303px;
     height: 300px;
+    /* background-color: rgb(96, 34, 96); */
+}
+
+.main_right_bottom {
+    float: left;
     border: 1px solid black;
-}
-
-.bottom {
-    height: 190px;
     width: 616px;
-    clear: both;
+    height: 190px;
+    /* background-color: skyblue; */
 }
-
-
-
 
 .footer {
-    clear: both;
     height: 110px;
+}
+
+span {
+    display: block;
+    text-align-last: left;
 }

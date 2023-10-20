@@ -1,0 +1,45 @@
+.wrapper {
+    margin: 0 auto;
+    width: 1200px;
+    margin-top: 50px;
+
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.header {
+    margin-bottom: 10px;
+    height: 100px;
+    background-color: rgb(195, 236, 183);
+}
+
+.nav {
+    margin-bottom: 10px;
+    height: 100px;
+    background-color: rgb(195, 236, 183);
+}
+
+.main {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 990px;
+    height: 400px;
+    background-color: yellow;
+
+}
+
+.right {
+    width: 200px;
+    height: 400px;
+    background-color: orange;
+} 
+
+.footer {
+    height: 100px;
+    background-color: rgb(195, 236, 183);
+}
+
+.clearfix {
+    /* 清除左右两侧浮动的影响 */
+    clear: both;
+}
